@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/create-point.css">
+    <link rel="stylesheet" href="styles/responsive.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300;700&display=swap">
 
@@ -20,7 +20,7 @@
 
         <header>
             <img src="/assets/icones/logo.svg" alt="Ecoleta">
-            <a href="http://google.com.br">
+            <a href="index.html">
                 <span></span> Voltar para home
             </a>
         </header>
@@ -35,36 +35,79 @@
 
                 <div class="field">
                     <label for="name">Nome da entidade</label>
-                    <input type="text" name="name">
+                    <input type="text" name="name" required>
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="adress">Endereço</label>
-                        <input type="text" name="adress">
+                        <input type="text" name="adress" required>
                     </div>
                     <div class="field">
                         <label for="adress2">Número/Complemento</label>
-                        <input type="text" name="adress2">
+                        <input type="text" name="adress2" required>
                     </div>
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="state">Estado</label>
-                        <select name="uf" id="">
+                        <select name="uf" required>
                                 <option value="">Selecione o estado</option>
                         </select>
-                        <input type="hidden" name="state">
+                        <input type="hidden" name="state" required>
 
                     </div>
                     <div class="field">
                         <label for="city">Cidade</label>
-                        <select name="city" disabled>
+                        <select name="city" disabled required>
                                 <option value="">Selecione a cidade</option>
                             </select>
                     </div>
                 </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Itens de coleta</h2>
+                </legend>
+
+                <div class="items-grid">
+
+                    <li data-id="1">
+                        <img src="assets/icones/lampadas.svg" alt="Lâmpadas">
+                        <span>Lâmpadas</span>
+                    </li>
+
+                    <li data-id="2">
+                        <img src="assets/icones/baterias.svg" alt="Pilhas e baterias">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+
+                    <li data-id="3">
+                        <img src="assets/icones/papeis-papelao.svg" alt="Papéis e papelão">
+                        <span>Papéis e Papelão</span>
+                    </li>
+
+                    <li data-id="4">
+                        <img src="assets/icones/eletronicos.svg" alt="Resíduos Eletrônico">
+                        <span>Resíduos Eletrônico</span>
+                    </li>
+
+                    <li data-id="5">
+                        <img src="assets/icones/organicos.svg" alt="Resíduo Orgânicos">
+                        <span>Resíduo Orgânicos</span>
+                    </li>
+
+                    <li data-id="6">
+                        <img src="assets/icones/oleo.svg" alt="Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+
+                </div>
+
+                <input type="hidden" name="items">
+
             </fieldset>
 
             <button type="submit">Carregar ponto de coleta</button>
